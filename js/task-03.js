@@ -12,16 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-// Не показує фото
-for (const image of images) {
-  const galleryElement = document.querySelector('.gallery');
-  galleryElement.insertAdjacentHTML("afterbegin", `<li><img src="${image.url}" alt="${image.alt}" width="320px"></img></li>`);
-}
 
-// // Все працює
-// const listOfImage = document.querySelector('.gallery');
-// const addNewImage = images.map(({ url, alt }) => `<li class="list-item"><img src ="${url}" alt="${alt}" width="320"></img></li>`)
-//   .join("");
 
-// listOfImage.insertAdjacentHTML('beforeend', addNewImage);
+
+const listOfImage = document.querySelector('.gallery');
+const addNewImage = images.map(({ url, alt }) => `<li class="list-item"><img src ="${url}" alt="${alt}" width="320"></img></li>`)
+  .join("");
+
+listOfImage.insertAdjacentHTML('beforeend', addNewImage);
 

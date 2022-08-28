@@ -8,7 +8,7 @@ function validationChek(event) {
     const onInput = event.currentTarget;
     const inputLength = onInput.dataset.length;
 
-    if (onInput.value.length < inputLength) {
+    if (onInput.value.length < inputLength || onInput.value.length > inputLength) {
         onInput.classList.add('invalid')
     }
     else {
